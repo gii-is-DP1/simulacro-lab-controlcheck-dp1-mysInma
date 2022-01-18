@@ -3,6 +3,7 @@ package org.springframework.samples.petclinic.product;
 import java.util.List;
 
 public class ProductService {
+    /*
     public List<Product> getAllProducts(){
         return null;
     }
@@ -18,6 +19,7 @@ public class ProductService {
     public Product save(Product p){
         return null;       
     }
+    */
 
     
 }
