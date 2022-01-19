@@ -16,8 +16,18 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
     List<ProductType> findAllProductTypes();
 
     Optional<Product> findById(int id);
+
     Product findByName(String name);
 
-    //Product save(Product p);
+    //Crear una query para una consulta personalizada
+    @Query("SELECT pt FROM ProductType pt WHERE pt.name =:typeName")
+    ProductType findProductByName(String typeName);
+
+    Product save(Product p);
+
+    @Query("SELECT p FROM Product p WHERE p.price < :price")
+    List<Product> findByPriceLessThan(double price);
+
+   
     
 }

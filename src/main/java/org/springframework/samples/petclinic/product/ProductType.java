@@ -20,4 +20,9 @@ public class ProductType extends BaseEntity{
     @Column(name="name", unique=true) //tipo cadena y debe ser única
     @Length(min = 3, max = 50)
     String name;
+
+
+    
+
+
 }
